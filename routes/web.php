@@ -22,11 +22,12 @@ use Illuminate\Database\Capsule\Manager;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
 
 // Page Route
+Route::get('/', [UserController::class, 'userLoginPage']);
 Route::get('/userLogin', [UserController::class, 'userLoginPage']);
 Route::get('/userRegistration', [UserController::class, 'userRegistrationPage']);
 Route::get('/sendOTP', [UserController::class, 'sendOTPPage']);
