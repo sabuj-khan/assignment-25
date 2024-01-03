@@ -47,7 +47,7 @@ class UserController extends Controller
         }else{
             return response()->json([
                 'status'=>'fail',
-                'message'=>'Unauthorized user'
+                'message'=>'Unauthorized'
             ]);
         }
 
